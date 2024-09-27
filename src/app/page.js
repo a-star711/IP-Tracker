@@ -14,7 +14,7 @@ export default function Home() {
 
   const [ipData, setIpData] = useState(null)
   const handleIpDataChange = (data) => {
-    console.log('Received data:', data); // Add this log
+
     setIpData(data)
   };
 

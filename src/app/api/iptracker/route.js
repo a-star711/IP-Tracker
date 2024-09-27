@@ -1,14 +1,8 @@
 import { NextResponse } from 'next/server';
 
-
-// GET https://geo.ipify.org/api/v2/country,city?apiKey=at_64OcUrVPwGVSYT6l4dpRykRIR2xI1&ipAddress=8.8.8.8
-
 export async function GET(req) {
-
-  const apiKey = process.env.IPIFY_API;
-  
+  const apiKey = process.env.IPIFY_API;  
   try {
-
       const { searchParams } = new URL(req.url)
       const ip = searchParams.get('ip')
       console.log('BackEnd API', ip)
@@ -17,10 +11,6 @@ export async function GET(req) {
       return NextResponse.json({error: 'IP is required'}, {status:400})
     }
 
-
-
-    
- 
     const geoUrl = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ip}`;
  
     const geoResponse = await fetch(geoUrl)
@@ -36,6 +26,4 @@ export async function GET(req) {
     return NextResponse.json({error: 'Internal server error'}, {status:500})
     
   }
-
-  
 }
