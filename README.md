@@ -9,7 +9,7 @@ SPA that allow users to get the location, timezone & the ISP(if available) of an
 
 Thanks To: react-leaflet, geo.ipify.org & Vercel for the hosting:
 
-Try it here:
+Try it here 👽 
 https://ip-tracker-pied.vercel.app/
 
 -Please note that multicast addresses are considered as invalid & cannot be tracked.
